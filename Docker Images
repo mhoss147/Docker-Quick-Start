@@ -1,0 +1,46 @@
+# Docker Images
+
+- Log into your machine where you installed docker earlier
+
+
+- check images
+
+docker images
+
+
+- lets pull ubuntu 16.04 from docker
+
+docker pull ubuntu:16.04
+
+
+- check images again
+
+docker images
+
+
+- run docker image
+
+docker run ubuntu:16.04 (os name: version)
+
+
+or
+
+
+docker run c522ac0... (image ID)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
