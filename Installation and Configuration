@@ -1,0 +1,64 @@
+# Installation
+
+(USING A CENTOS LINUX)
+
+
+LOG into cloud machine
+
+- check the version
+
+
+cat /etc/redhat-release
+
+
+
+- install all the packages you need to INstall Docker
+
+sudo yum install -y yum-utils device-mapper-persistent-data lvm2
+
+
+
+
+- add a repo in order to install docker i will be using (CE- community edition)
+
+sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+
+
+- repo added, now install docker
+
+
+sudo yum install docker-ce
+
+
+- enable Docker
+
+sudo systemctl enable docker
+
+
+- enable Docker in your system
+
+sudo systemctl start docker
+
+
+- run a container named "hello-world" 
+
+sudo docker run hello-world
+
+
+- Note: try to run this without sudo user
+
+
+docker run hello-world
+
+
+- if get permission denied than ADD permission for that user (here cloud_user)
+
+sudo usermod -a -G docker cloud_user
+
+
+
+
+
+
+
+
