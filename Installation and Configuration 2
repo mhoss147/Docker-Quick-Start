@@ -8,6 +8,38 @@
 wget -q0- https://get.docker.com |sh
 
 
+- give previledge to cloud_user for docker (IF REQUIRED)
+
+
+sudo usermod -aG docker cloud_user
+
+
+LOGOUT, LOG BACK IN
+
+
+- start
+
+sudo systemctl start docker
+
+
+- enable
+
+sudo systemctl enable docker
+
+
+- info
+
+docker info
+
+
+
+
+
+
+
+
+- 
+
 
 
 
