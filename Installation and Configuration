@@ -56,6 +56,13 @@ docker run hello-world
 sudo usermod -a -G docker cloud_user
 
 
+then logout and log back in
+
+
+
+
+
+
 
 
 
