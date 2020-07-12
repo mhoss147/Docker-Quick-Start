@@ -6,7 +6,23 @@ Log into machine where you installed docker
 - check images
 
 
-docker images
+docker images  
+
+
+or 
+
+docker image ls
+
+
+- run hello-world image
+
+
+docker container run hello-world
+
+or
+
+
+docker run hello-world
 
 
 
