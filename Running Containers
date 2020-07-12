@@ -26,6 +26,66 @@ docker run hello-world
 
 
 
+- create container named python-container and go inside it
+
+docker run -it --name python-container 31     
+
+
+(here 31 is from imageid's first 2 letters) you will see prompt like this-> root@e8163ac0ee8e:/#
+
+
+- check version 
+
+
+cat /etc/issue
+
+
+- see if python installed 
+
+
+python3
+
+
+exit()
+
+
+- open hello-world file 
+
+vim hello-world
+
+
+(not installed?)
+
+
+apt install vim
+
+
+- create file hello-world
+
+
+vim hello-world.py
+
+
+inside the file write:
+
+          print("Hello world")
+          
+          
+save and exit
+
+
+- run above py file
+
+
+python3 hello-world.py
+
+
+
+
+
+
+
+
 
 
 
