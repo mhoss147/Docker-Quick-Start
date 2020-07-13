@@ -1,0 +1,33 @@
+# The Container Lifecycle
+
+
+Log into machine where you installed docker
+
+
+- check images
+
+docker images 
+
+
+- check if any container running currently
+
+
+docker container ls
+
+
+- check if any container running previously but stopped now
+
+docker container ls -a 
+
+
+- run the container
+
+docker container run -it ubuntu:16.04
+
+
+
+
+
+
+
+
