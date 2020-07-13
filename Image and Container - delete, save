@@ -1,0 +1,108 @@
+# Image and Container Management
+
+
+Log into machine where you installed docker
+
+
+- check images
+
+docker images 
+
+
+- check if any container running currently
+
+
+docker container ls
+
+
+- previously running container now stopped
+
+
+docker container ls -a
+
+
+- remove a "container" using CONTAINER_ID or IMAGE
+
+
+docker container rm CONTAINER_ID or IMAGE
+
+
+- remove a "image" from docker using IMAGE_ID
+
+
+docker rmi IMAGE_ID
+
+
+for more...
+
+docker rmi IMAGE_ID IMAGE_ID ...
+
+
+# save/push a "Image" to dockerhub
+
+
+- login to docker hub
+
+
+docker login
+
+Username: mh...7
+
+Password: broochelebond
+
+
+- check the images you have
+
+
+docker images
+
+
+- name a docker tag
+
+
+docker tag IMAGE_ID mhoss147/my-first-docker-file:v1     (mhoss147/my-first-docker-file:v1 = repository name i am giving, v1 = version 1)
+
+
+docker images
+
+
+
+- push/save
+
+
+docker push mhoss147/my-first-docker-file
+
+
+- see the changes you have made to docker file
+
+
+cat onboarding/dockerfile
+
+
+
+- pull a docker image from dockerhub
+
+
+docker pull mhoss147/my-first-docker-file:v1       (mhoss147/my-first-docker-file:v1 = repository name i pushed)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
