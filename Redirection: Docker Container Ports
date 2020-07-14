@@ -1,0 +1,65 @@
+# Redirection: Docker Container Ports 
+
+
+Log into machine where you installed docker
+
+
+- check images
+
+docker images 
+
+
+- check if any container running currently
+
+
+docker container ls
+
+
+- previously running container now stopped
+
+
+docker container ls -a
+
+
+
+- run NGINX image and attached 
+
+docker container run -d nginx     (-d = attach the container)
+
+
+
+- check the containers you have
+
+docker container ls
+
+
+
+- grep (search) container with ID
+
+docker container inspect 558... | grep IPAdd     (here 558 = CONTAINER ID) 
+
+
+
+- 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
