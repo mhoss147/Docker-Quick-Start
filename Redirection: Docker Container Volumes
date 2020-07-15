@@ -1,0 +1,197 @@
+# Redirection: Docker Container Volumes 
+
+
+- Docker volumes are used by container
+
+
+Log into machine where you installed docker
+
+
+- check images
+
+docker images 
+
+
+- check if any container running currently
+
+
+docker container ls
+
+
+- previously running container now stopped
+
+docker container ls -a
+
+
+- check if you have any volume
+
+docker volume ls
+
+
+- create a volume
+
+docker volume create moh-volume
+
+
+
+- check if created volume
+
+docker volume ls
+
+
+
+- get the details of the volume
+
+docker volume inspect moh-volume    (moh-volume = vol name)
+
+
+- mount a volume to a container (moh-volume = vol name)  (moh-container = naming the container)
+
+docker container run -d --name moh-container --mount source=moh-volume,target=/app nginx
+
+
+
+- check
+
+docker container ls
+
+
+
+
+- check the container
+
+
+docker container inspect moh-container
+
+
+- goto the source to see
+
+sudo ls /var/lib/docker/volumes
+
+
+
+- go inside the volume
+
+sudo ls /var/lib/docker/volumes/moh-volume
+
+it's emmpty!
+
+
+- lets create some data
+
+docker container exec -it moh-container sh
+
+ls
+
+echo "Hello!" >> /app/hello.txt
+
+ls app
+
+
+exit            
+
+- check now
+
+sudo ls /var/lib/docker/volumes/moh-volume/_data
+
+
+inside we see   hello.txt
+
+
+- stop container
+
+docker container stop moh-container
+
+
+- then remove container
+
+docker container rm moh-container
+
+
+- check if data is still there
+
+
+sudo ls /var/lib/docker/volumes/moh-volume/_data
+
+
+it is there!
+
+
+- create Another container named moh-container2, mount the moh-volume, using NGINX image
+
+docker container run -d --name moh-container2 -v moh-volume:/app nginx
+
+
+
+- lets see if data exists
+
+docker container exec -it moh-container2 sh
+
+ls
+
+
+- let's see what inside the app
+
+ls -lha app
+
+ah, we see hello.txt app is there!
+
+
+
+- check inside the hello.txt
+
+
+cat /app/hello.txt
+
+
+it's what we saved!
+
+
+- let's create a file here named bye.txt
+
+echo "Goodbye!" >> /app/bye.txt
+
+exit
+
+
+- list the data inside the volume
+
+sudo ls /var/lib/docker/volumes/moh-volume/_data
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
