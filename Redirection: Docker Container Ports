@@ -27,10 +27,24 @@ docker container ls -a
 docker container run -d nginx     (-d = attach the container)
 
 
+- see history
+
+docker image history nginx
+
+
 
 - check the containers you have
 
 docker container ls
+
+
+
+
+
+- install elinks if NOT available
+
+
+sudo yum install elinks
 
 
 
@@ -39,12 +53,43 @@ docker container ls
 docker container inspect 558... | grep IPAdd     (here 558 = CONTAINER ID) 
 
 
+- elinks container
 
-- 
+elinks 172.17...      (172... = IP from above command)
+
+NGINX running...
 
 
 
+- try with localhost
 
+
+elinks localhost
+
+NOT running
+
+
+
+- try with this to solve (with CAPITAL P, random port will be matches with local port)
+
+
+docker container run -d -P nginx
+
+
+- run a apache server (with lowercase p we can specify what port to match with what port)
+
+docker container run -d -p 80:80 httpd
+
+
+
+- get the IP for that box
+
+curl -4 icanhazip.com
+
+
+- run apache server 
+
+elinks 18.236.244.39
 
 
 
