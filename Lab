@@ -1,0 +1,54 @@
+# Pull the latest `alpine` image.
+
+
+    Pull the latest alpine image from Docker Hub:
+
+     docker image pull alpine:latest
+
+    You can confirm it is there with:
+
+     docker images
+
+
+# Pull the latest `httpd` image.
+
+
+
+    Pull the latest httpd image:
+
+     docker pull httpd:latest
+
+        Note: If you don't put the version, the latest version is assumed.
+
+# Pull nginx 1.15.
+
+
+
+    Pull nginx version 1.15:
+
+     docker pull nginx:1.15
+
+    To confirm that it is there:
+
+     docker images
+
+
+
+# Compare the history
+
+
+
+    Look at the history for both the httpd and nginx images.
+
+     docker history httpd
+
+    Note the following command gives an error because the latest version is assumed:
+
+     docker history nginx
+
+    When you specify the right version, the command succeeds:
+
+     docker history nginx:1.15
+
+
+
